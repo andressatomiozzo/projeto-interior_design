@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinaDecor - Contato</title>
-    <link rel="stylesheet" href="estilos/contato.css">
+    <link rel="stylesheet" href="estilos/contato.css" />
   </head>
   <body>
     <header>
@@ -21,28 +21,28 @@
         <span></span>
       </div>
       <nav id="nav">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="#">Serviços</a>
-        <a href="#">Contato</a>
+        <a href="contato.html">Contato</a>
         <a href="#">Suporte</a>
         <a href="#" id="nav_cadastro">Cadastre-se</a>
       </nav>
     </header>
-    
+
     <h1>Contato</h1>
     <p>
       Você pode nos contatar pelo e-mail
-      <a href="mailto:info@vivadecor.com">info@vivadecor.com</a>
+      <a href="mailto:info@vivadecor.com" id="email">info@vivadecor.com</a>
       ou enviar uma mensagem pelo formulário abaixo.
     </p>
 
     <form action="/contato" method="post" autocomplete="on">
       <div>
-        <label for="mail">Seu e-mail</label>
+        <label for="imail" id="mail">Seu e-mail</label>
         <input
           type="email"
           name="email"
-          id="mail"
+          id="imail"
           required
           autocomplete="email"
           placeholder="seuemail@exemplo.com"
@@ -51,30 +51,95 @@
 
       <div>
         <label for="mensagem">Sua mensagem</label>
-        <textarea
-          name="message"
-          id="mensagem"
-          rows="6"
-          required
-          maxlength="500"
-          placeholder="Escreva sua mensagem (até 500 caracteres)"
-        ></textarea>
-        <small id="contador">0/500</small>
+        <div id="textarea">
+            <textarea
+              name="message"
+              id="mensagem"
+              rows="6"
+              required
+              maxlength="500"
+              placeholder="Escreva sua mensagem (até 500 caracteres)"
+            ></textarea>
+            <small id="contador">0/500</small>
+        </div>
       </div>
 
       <button type="submit">Enviar</button>
     </form>
 
-    <script>
-      const mensagem = document.getElementById("mensagem");
-      const contador = document.getElementById("contador");
-      const max = mensagem.maxLength;
-
-      function atualizar() {
-        contador.textContent = `${mensagem.value.length}/${max}`;
-      }
-      mensagem.addEventListener("input", atualizar);
-      atualizar();
-    </script>
+        <footer>
+      <div>
+        <img
+          src="midia/Logo_branca.png"
+          alt="Lovo Viva decor"
+          id="footer_logo"
+        />
+      </div>
+      <div id="footer_container">
+        <div>
+          <div id="icone_container">
+            <p id="icone_p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Repellendus, natus.
+            </p>
+            <div id="icone_content">
+              <a href="#"
+                ><img
+                  src="midia/icone_facebook.png"
+                  alt="Icone do Facebook"
+                  class="icone_img"
+              /></a>
+              <a href="#"
+                ><img
+                  src="midia/icone_instagran.png"
+                  alt="Icone do Instagran"
+                  class="icone_img"
+              /></a>
+              <a href="#"
+                ><img
+                  src="midia/icone_linkedin.png"
+                  alt="Icone do LinkedIn"
+                  class="icone_img"
+              /></a>
+              <a href="#"
+                ><img
+                  src="midia/icone_x.png"
+                  alt="Icone do X"
+                  class="icone_img"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p onclick="abraCadabra3()">
+            <strong>Nossos serviços - Design</strong>
+          </p>
+          <ul class="servicos_footer" id="design_ul">
+            <li>Design de interiores</li>
+            <li>Design de exteriores</li>
+            <li>Design de iluminação</li>
+            <li>Design de escritórios</li>
+          </ul>
+        </div>
+        <div onclick="abraCadabra4()">
+          <p><strong>Nossos serviços - Outros</strong></p>
+          <ul class="servicos_footer" id="outros_ul">
+            <li>Avaliações</li>
+            <li>Carreira</li>
+            <li>Precificação</li>
+            <li>Consultas de imprensa</li>
+          </ul>
+        </div>
+        <div>
+          <p><strong>Nosso contato</strong></p>
+          <ul id="contato_ul">
+            <li>info@vivadecor.com</li>
+            <li>Rua Ametista, n°123. São Paulo - SP</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="script.js"></script>
   </body>
 </html>

@@ -21,14 +21,14 @@ body {
 /* -------------CABEÇALHO-------------*/
 
 section {
-    max-width: 800px;
-    margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 header {
   position: fixed;
   z-index: 3;
-  width: 93%;
+  width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -489,7 +489,6 @@ footer p {
     display: flex;
     justify-content: space-between;
   }
-
 
   #passos_img {
     width: 40%;

@@ -16,19 +16,10 @@ body {
   font-family: var(--fonte-padrão);
 }
 
-/* Fiz esse site em mobile-firt */
-
-/* -------------CABEÇALHO-------------*/
-
-section {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 header {
   position: fixed;
   z-index: 3;
-  width: 93%;
+  width: calc(100% - 40px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,4 +81,182 @@ nav a:hover {
 
 nav.active {
   display: flex;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 50px;
+  text-align: center;
+  padding: 60px 0 10px 0;
+}
+
+p,
+label,
+input,
+textarea {
+  color: var(--COR02);
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+#email {
+  text-decoration: none;
+  color: black;
+}
+
+label {
+  padding-top: 15px;
+  padding-bottom: 3px;
+}
+
+input {
+  width: 250px;
+  border: 1px solid #000000;
+}
+
+textarea {
+  width: 350px;
+  border: 1px solid #000000;
+}
+
+#textarea small {
+  display: flex;
+  justify-content: flex-end;
+  width: 350px;
+  margin: 0 auto;
+}
+
+button {
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  background-color: black;
+  font-size: 0.9rem;
+  color: white;
+  display: block;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+
+/* ------------------Footer---------------- */
+
+footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  top: calc(100vh - 600px);
+}
+
+footer p {
+  color: white;
+  margin: 10px auto 10px auto;
+}
+
+#footer_logo {
+  margin: 10px 10px 0 10px;
+  width: 90px;
+}
+
+#icone_content {
+  width: 60%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icone_img {
+  width: 30px;
+}
+
+.servicos_footer {
+  display: none;
+  margin-left: 35%;
+  margin-top: 0;
+  color: #a3a2a2;
+  font-size: 0.8rem;
+}
+
+#contato_ul {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+  color: #a3a2a2;
+}
+
+@media (min-width: 768px) {
+  header {
+    background-color: white;
+  }
+  #menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    position: relative;
+    top: 0px;
+    right: -5px;
+  }
+
+  nav a {
+    color: black;
+    font-weight: 500;
+  }
+
+  #nav_cadastro {
+    border-radius: 5px;
+  }
+
+  /* -------------CORPO---------------- */
+  input {
+    width: 300px;
+  }
+
+  textarea {
+    width: 650px;
+  }
+
+  #textarea small {
+    width: 650px;
+  }
+
+  /* footer */
+  #footer_container {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+  }
+
+  #icone_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+  }
+
+  #icone_p {
+    font-size: 0.8rem;
+    color: #a3a2a2;
+  }
+
+  #icone_content {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .servicos_footer {
+    display: block;
+    margin-left: 30px;
+    margin-top: 0;
+    color: #a3a2a2;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+  }
 }

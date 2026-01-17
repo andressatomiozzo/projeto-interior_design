@@ -15,6 +15,7 @@ function updateImage() {
   }
 }
 window.addEventListener("resize", updateImage);
+updateImage();
 
 function abraCadabra1() {
   const jantar = window.document.getElementById("img_jantar");
@@ -61,3 +62,15 @@ function abraCadabra4() {
     outros.style.display = "none";
   }
 }
+
+//-------------------------CONTATO-------------------------
+
+const mensagem = document.getElementById("mensagem");
+const contador = document.getElementById("contador");
+const max = mensagem.maxLength;
+
+function atualizar() {
+  contador.textContent = `${mensagem.value.length}/${max}`;
+}
+mensagem.addEventListener("input", atualizar);
+atualizar();
