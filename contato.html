@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinaDecor - Contato</title>
+    <link rel="stylesheet" href="estilos/contato.css">
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="midia/Logo_branca.png"
+          alt="Lovo Viva decor"
+          id="header_logo"
+        />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav">
+        <a href="#">Home</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        <a href="#">Suporte</a>
+        <a href="#" id="nav_cadastro">Cadastre-se</a>
+      </nav>
+    </header>
+    
+    <h1>Contato</h1>
+    <p>
+      Você pode nos contatar pelo e-mail
+      <a href="mailto:info@vivadecor.com">info@vivadecor.com</a>
+      ou enviar uma mensagem pelo formulário abaixo.
+    </p>
+
+    <form action="/contato" method="post" autocomplete="on">
+      <div>
+        <label for="mail">Seu e-mail</label>
+        <input
+          type="email"
+          name="email"
+          id="mail"
+          required
+          autocomplete="email"
+          placeholder="seuemail@exemplo.com"
+        />
+      </div>
+
+      <div>
+        <label for="mensagem">Sua mensagem</label>
+        <textarea
+          name="message"
+          id="mensagem"
+          rows="6"
+          required
+          maxlength="500"
+          placeholder="Escreva sua mensagem (até 500 caracteres)"
+        ></textarea>
+        <small id="contador">0/500</small>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+      const mensagem = document.getElementById("mensagem");
+      const contador = document.getElementById("contador");
+      const max = mensagem.maxLength;
+
+      function atualizar() {
+        contador.textContent = `${mensagem.value.length}/${max}`;
+      }
+      mensagem.addEventListener("input", atualizar);
+      atualizar();
+    </script>
+  </body>
+</html>

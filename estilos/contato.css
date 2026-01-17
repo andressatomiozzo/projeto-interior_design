@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --cor01: #eceeea;
+  --COR02: #545454;
+
+  --fonte-padrão: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-padrão);
+}
+
+/* Fiz esse site em mobile-firt */
+
+/* -------------CABEÇALHO-------------*/
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  z-index: 3;
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+header img {
+  width: 90px;
+}
+
+header span {
+  height: 10rem;
+}
+
+/* Botão do menu hambúrguer */
+.menu-toggle {
+  display: flex; /* Mostra o botão */
+  flex-direction: column; /* Alinha as barras verticalmente */
+  cursor: pointer; /* Muda o cursor para mãozinha */
+}
+/* Linhas do menu hambúrguer */
+.menu-toggle span {
+  background: white;
+  height: 2px;
+  width: 25px;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+nav {
+  display: none; /* Esconde o menu por padrão */
+  flex-direction: column; /* Alinha links na vertical */
+  background-color: #444; /* Cor de fundo do menu */
+  position: absolute; /* Permite posicionamento no topo */
+  top: 50px;
+  right: 20px;
+  border-radius: 5px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#nav_cadastro {
+  background-color: black;
+  color: white;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #f4a261;
+}
+
+nav.active {
+  display: flex;
+}

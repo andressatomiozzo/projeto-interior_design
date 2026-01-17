@@ -20,9 +20,15 @@ body {
 
 /* -------------CABEÇALHO-------------*/
 
+section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 header {
   position: fixed;
-  width: 93vw;
+  z-index: 3;
+  width: 93%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +106,7 @@ h2 {
   padding: 40px 0 15px 0;
   font-size: 2rem;
   font-weight: 350;
-  width: 80vw;
+  width: 80%;
   margin: auto;
 }
 
@@ -130,7 +136,7 @@ p {
 
 .imagem {
   display: block;
-  max-width: 80vw;
+  max-width: 80%;
   margin: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.36);
 }
@@ -138,13 +144,17 @@ p {
 .p_grande {
   padding: 10px;
   margin-bottom: 10px;
-  width: 80vw;
+  width: 80%;
 }
 
 #estima_content {
   padding: 40px;
   display: flex;
   justify-content: space-around;
+}
+
+.estima_div {
+  padding: 10px;
 }
 
 .estima_num {
@@ -162,7 +172,7 @@ p {
 
 .servicos_content {
   display: flex;
-  width: 80vw;
+  width: 80%;
   margin: auto;
   gap: 15px;
   padding-bottom: 20px;
@@ -180,7 +190,7 @@ p {
 .hid_div {
   display: flex;
   justify-content: space-between;
-  width: 80vw;
+  width: 80%;
   background-color: rgba(211, 211, 211, 0.438);
   padding: 8px;
   margin: 10px auto 10px auto;
@@ -194,7 +204,7 @@ p {
 
 .hid_img {
   display: none;
-  max-width: 80vw;
+  max-width: 80%;
   margin: auto;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.36);
 }
@@ -205,7 +215,7 @@ p {
 
 .passos_content {
   display: flex;
-  width: 80vw;
+  width: 80%;
   margin: 20px auto 50px auto;
   gap: 15px;
 }
@@ -222,7 +232,7 @@ p {
 
 .depoimento_container {
   background-color: black;
-  width: 400px;
+  width: 300px;
   margin: 10px auto 10px auto;
   padding: 20px;
   border-radius: 10px;
@@ -269,6 +279,7 @@ p {
 #mail_container {
   max-width: 500px;
   margin: 20px auto;
+  padding: 0 40px 20px 40px;
 }
 
 #mail_content {
@@ -276,7 +287,7 @@ p {
   justify-content: space-around;
   margin: 10px auto;
   padding: 10px;
-  width: 75vw;
+  width: 75%;
   background-color: rgb(233, 230, 230);
   border-radius: 5px;
 }
@@ -319,7 +330,7 @@ footer p {
 }
 
 #icone_content {
-  width: 30vw;
+  width: 60%;
   margin: 10px auto;
   display: flex;
   justify-content: space-around;
@@ -372,7 +383,7 @@ footer p {
 
   /*-------BODY-------- */
   body > div {
-    width: 90vw;
+    width: 90%;
     margin: auto;
   }
 
@@ -395,7 +406,7 @@ footer p {
   }
 
   #projeto_p {
-    width: calc(100% - 280px);
+    /* width: calc(100% - 280px); */
     text-align: left;
     margin: 0 auto 0 0;
   }
@@ -403,9 +414,8 @@ footer p {
   #imagem_01 {
     width: 250px;
     margin: 0 0 0 auto;
-    position: absolute;
-    top: 80px;
-    right: 5vw;
+    position: relative;
+    right: 5%;
   }
 
   #button_projeto {
@@ -462,16 +472,7 @@ footer p {
   }
 
   #imagem_03 {
-    width: 35vw;
     margin: auto;
-  }
-
-  #exemplos_h2,
-  #exemplos_p,
-  .hid_div,
-  .hid_img {
-    width: 45vw;
-    margin-left: 20px;
   }
 
   #exemplos_h2 {
@@ -489,12 +490,13 @@ footer p {
     justify-content: space-between;
   }
 
-  .passos_content {
-    width: 50vw;
-  }
 
   #passos_img {
     width: 40%;
+  }
+
+  .depoimento_container {
+    width: 500px;
   }
 
   #mail_content {
@@ -504,7 +506,7 @@ footer p {
   #footer_container {
     display: flex;
     justify-content: space-around;
-    width: 95vw;
+    width: 95%;
   }
 
   #icone_container {
@@ -536,9 +538,12 @@ footer p {
   }
 }
 
-@media (min-width: 992px) {
-  #projeto_container {
-    width: 800px;
-    margin: auto;
+@media (min-width: 800px) {
+  .depoimentos {
+    display: flex;
+  }
+
+  .depoimento_container {
+    width: 350px;
   }
 }
