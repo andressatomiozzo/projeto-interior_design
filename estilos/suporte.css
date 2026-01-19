@@ -14,6 +14,7 @@
 
 body {
   font-family: var(--fonte-padrão);
+  background-color: #ededed;
 }
 
 header {
@@ -88,59 +89,30 @@ h1 {
   font-size: 50px;
   text-align: center;
   padding: 60px 0 10px 0;
+  padding-top: 90px;
+  color: #333;
 }
 
-p,
-label,
-input,
-textarea {
+p {
   color: var(--COR02);
   text-align: center;
   display: block;
-  margin: auto;
+  color: #a3a2a2;
+  padding-top: 10px;
 }
 
-#email {
-  text-decoration: none;
-  color: black;
-}
 
-label {
-  padding-top: 15px;
-  padding-bottom: 3px;
-}
-
-input {
-  width: 250px;
-  height: 25px;
-  border: 1px solid #000000;
-}
-
-textarea {
-  width: 350px;
-  border: 1px solid #000000;
-}
-
-#textarea small {
+#wpp {
   display: flex;
-  justify-content: flex-end;
-  width: 350px;
-  margin: 0 auto;
+  justify-content: center;
 }
 
-button {
-  text-decoration: none;
-  width: 100px;
-  text-align: center;
-  background-color: black;
-  font-size: 0.9rem;
-  color: white;
-  display: block;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 2px;
+#wpp img {
+  margin-top: 30px;
+  width: 70px;
+  border-radius: 5px;
 }
-  
+
 
 /* ------------------Footer---------------- */
 
@@ -148,7 +120,7 @@ footer {
   background-color: black;
   color: white;
   position: relative;
-  top: calc(100vh - 600px);
+  top: calc(100vh - 400px);
 }
 
 footer p {
@@ -211,19 +183,6 @@ footer p {
 
   #nav_cadastro {
     border-radius: 5px;
-  }
-
-  /* -------------CORPO---------------- */
-  input {
-    width: 300px;
-  }
-
-  textarea {
-    width: 650px;
-  }
-
-  #textarea small {
-    width: 650px;
   }
 
   /* footer */

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LinaDecor - Contato</title>
-    <link rel="stylesheet" href="estilos/contato.css" />
+    <link rel="stylesheet" href="estilos/suporte.css" />
   </head>
   <body>
     <header>
@@ -23,50 +23,22 @@
       <nav id="nav">
         <a href="index.html">Home</a>
         <a href="contato.html">Contato</a>
-        <a href="suporte.html">Suporte</a>
+        <a href="#">Suporte</a>
         <a href="#" id="nav_cadastro">Cadastre-se</a>
       </nav>
     </header>
 
-    <h1>Contato</h1>
+    <h1>Suporte</h1>
     <p>
-      Você pode nos contatar pelo e-mail
-      <a href="mailto:info@vivadecor.com" id="email">info@vivadecor.com</a>
-      ou enviar uma mensagem pelo formulário abaixo.
+      Já é cliente e precisa de ajuda? Entre com nossa equipe através do nosso
+      WhatsApp
     </p>
-
-    <form action="/contato" method="post" autocomplete="on">
-      <div>
-        <label for="imail" id="mail">Seu e-mail</label>
-        <input
-          type="email"
-          name="email"
-          id="imail"
-          required
-          autocomplete="email"
-          placeholder="seuemail@exemplo.com"
-        />
-      </div>
-
-      <div>
-        <label for="mensagem">Sua mensagem</label>
-        <div id="textarea">
-            <textarea
-              name="message"
-              id="mensagem"
-              rows="6"
-              required
-              maxlength="500"
-              placeholder="Escreva sua mensagem (até 500 caracteres)"
-            ></textarea>
-            <small id="contador">0/500</small>
-        </div>
-      </div>
-
-      <button type="submit">Enviar</button>
-    </form>
-
-        <footer>
+    <div>
+        <a href="https://wa.me/65999855542" id="wpp"
+          ><img src="midia/icone_wpp.jpg" alt="Icon do WhatsApp"
+        /></a>
+    </div>
+    <footer>
       <div>
         <img
           src="midia/Logo_branca.png"
@@ -138,7 +110,7 @@
         </div>
       </div>
     </footer>
-    
+
     <script src="script.js"></script>
   </body>
 </html>

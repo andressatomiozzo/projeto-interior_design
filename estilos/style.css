@@ -435,13 +435,17 @@ footer p {
   }
 
   .estima_div {
-    margin: 40px 0px;
+    margin-top: 40px;
   }
 
   #imagem_02 {
-    margin: auto 10px;
+    margin: auto;
     width: 400px;
     height: 250px;
+  }
+
+  #servicos_h2 {
+    padding-top: 80px;
   }
 
   .servicos_img {
